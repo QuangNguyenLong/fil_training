@@ -37,7 +37,7 @@ Below is the typical structure:
 
 The project structure is simple, yet effective. "Why?", you ask. If you want to implement a C program, the usual way is to do it all in a `foo.c` source file and compile it with `gcc foo.c -o foo`.
 
-Of course, if you do not want to reuse any of those line of codes, nothing is wrong. But normally that is not the case. Suppose you are developing a program to view point cloud, but only one at a time. You write a function to import a PLY file.
+Of course, if you do not want to reuse any of those line of codes, nothing is wrong. But normally that is not the case. Suppose you are developing a program to view point cloud. You write a function to import a PLY file.
 
 ```
 void read_ply(const char *filepath, float *positions, unsigned char *rgb)
@@ -46,7 +46,7 @@ void read_ply(const char *filepath, float *positions, unsigned char *rgb)
 }
 ```
 
-Later on, after have done COPY-PASTE-ing this function accross multiple program, you need to make another program to view point cloud, this time, a DYNAMIC POINT CLOUD. You are lazy, you will copy-paste the function. Now, since your code have memory leak, the leaked memory will surely stacks over time, and your computer crash. You realized it and come back fix all your code. What a "good" deal.
+Later on, after have done COPY-PASTE-ing this function accross multiple program, you need to make another program to view point cloud, this time, a DYNAMIC POINT CLOUD. You are lazy, you will copy-paste the function. Now, since your code have memory leak, the leaked memory will surely stacks over time, and your computer crash. You realized it and come back to fix all your code. What a "good" deal.
 
 "Well, just write new code then. I have plenty of time.", you said at the age of 20 with no achievements.
 
