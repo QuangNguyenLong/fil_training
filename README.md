@@ -2,4 +2,4 @@
 
 Tutorial order:
 
-[C training](c_cpp/c/README.md) 
+[C training](c_cpp/c) 

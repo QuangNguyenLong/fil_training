@@ -23,14 +23,16 @@ Below is the typical structure:
    my_project/
    ├── src/             # Source files
    │   ├── my_io.c
-   │   ├── module2.c
+   │   ├── my_render.c
+   │   ├── pointcloud.c
    ├── include/         # Header files
    │   ├── my_io.h
-   │   └── module2.h
+   │   └── my_render.h
+   │   ├── pointcloud.h
    ├── build/           # Compiled binaries
    ├── my_program/      # example program
    │   └── main.c
-   └── CMakelists.txt   # Build automation
+   └── CMakeLists.txt   # Build automation
 ```
 
 The project structure is simple, yet effective. "Why?", you ask. If you want to implement a C program, the usual way is to do it all in a `foo.c` source file and compile it with `gcc foo.c -o foo`.
