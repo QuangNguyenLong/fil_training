@@ -1,14 +1,20 @@
-# fil_training
+# FIL Training  
 
-Tutorial order:
+## Training Modules (Follow in Order)  
 
-[C](c_cpp/c/README.md)
-[CPP](c_cpp/cpp/README.md)
-[TCP socket](socket/tcp/README.md)
-[UDP socket](socket/udp/README.md)
-[cURL](http/libcurl/README.md)
-[nghttp2](http/libnghttp2/README.md)
-[nghttp3](http/libnghttp3/README.md)
-[netem](emulation/netem/README.md)
-[tbf](emulation/tbf/README.md)
+### 1. Programming Basics  
+1. [C Programming](c_cpp/c/README.md)  
+2. [C++ Programming](c_cpp/cpp/README.md)  
 
+### 2. Network Programming  
+3. [TCP Socket](socket/tcp/README.md)  
+4. [UDP Socket](socket/udp/README.md)  
+
+### 3. HTTP & Libraries  
+5. [cURL](http/libcurl/README.md)  
+6. [nghttp2](http/libnghttp2/README.md)  
+7. [nghttp3](http/libnghttp3/README.md)  
+
+### 4. Network Emulation  
+8. [netem](emulation/netem/README.md)  
+9. [tbf](emulation/tbf/README.md)  
