@@ -71,7 +71,7 @@ To compile and run the project, you need:
 So to build a project, you will need a file like [this](CMakeLists.txt).
 
 Then build the project:
-```
+```sh
 mkdir build
 cd build
 cmake ..
@@ -125,7 +125,7 @@ This way, you don’t have to manually edit the source code every time someone n
 
 Now try rebuild the project with the flag and run `my_program`:
 
-```
+```sh
 mkdir build
 cd build
 cmake .. -DSOME_FLAGS=ON
