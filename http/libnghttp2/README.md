@@ -1,1 +1,0 @@
-# A sample libnghtp2 tutorial
