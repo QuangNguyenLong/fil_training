@@ -34,7 +34,7 @@ A HTTP Respond from the HTTP server.
 ---
 
 ## III. Must Know
-- The [client](client/main.c) source code, **read** it please.
+- The [client/main.c](client/main.c), [http_client.h](include/http_client.h), and the [http_client.c](src/http_client.c) source code, **read** it please.
 - The sample code uses TCP Socket to perform HTTP Request.
 - The Sample code only implemented `GET` Request (there are many more).
 
