@@ -86,11 +86,11 @@ Done, you have successfully built yourself a C project.
 
 ### 1. Separating Concerns with Modules
 
-Let’s go back to our point cloud viewer example. Since you also have to render the point cloud to view it, instead of declaring all header functions one messy file, split it into mutiple header and source files, which called modules. By so, you can separate each module focuses on different job, so if you failed to view a point cloud, you know to check [my_render.c](src/my_render.c) and [my_render.h](include/my_render.h) instead of sifting through a 2000-line toibingu.c or something idk I am not dumb.
+Let’s go back to our point cloud viewer example. Since you also have to render the point cloud to view it, instead of declaring all header functions in one messy file, split it into mutiple header and source files, which called modules. By so, you can separate each module focuses on different job, so if you failed to view a point cloud, you know to check [my_render.c](src/my_render.c) and [my_render.h](include/my_render.h) instead of sifting through a 2000-line toibingu.c or something idk I am not dumb.
 
 ###  2. OOP in C
 
-C is not an object-oriented language like C++ or Java, but using a module,you can still mimic object-oriented principles like encapsulation, abstraction, and modularity using structs and function pointers. Take a look at these: [header](include/pointcloud.h) and [source file](src/pointcloud.c). Notice I declare a `pointcloud_t` class.
+C is not an object-oriented language like C++ or Java, but using a module, you can still mimic object-oriented principles like encapsulation, abstraction, and modularity using structs and function pointers. Take a look at these: [header](include/pointcloud.h) and [source file](src/pointcloud.c). Notice I declare a `pointcloud_t` class.
  
 ### 3. Usage
 
@@ -106,7 +106,7 @@ Why are you reading this ? Because your code is trash.
 
 ## V. TEAM WORKING
 
-At somepoint, you have to work with other people, or you have to code on legacy code (other people's mess), thus, you have to make changes to the project, but still, be able to not break everything. Behold, CMake options.
+At somepoint, you have to work with other people, or you have to code on legacy code (other people's mess), thus, you have to make changes to the project, but still, be able to not break everything. Behold, CMake compile definitions.
 
 ```
 option(SOME_FLAGS "Enable something" OFF)
