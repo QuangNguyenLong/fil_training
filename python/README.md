@@ -1,9 +1,27 @@
 # A sample Python project tutorial
 
-## I. Introduction
+## I. INTRODUCTION
 The objective of this tutorial is similar to the [C tutorial](../c_cpp/c/README.md) but focus more on Python.
 
-## II. Build the project
+## II. SETTING UP THE PROJECT
+
+### 1. PROJECT DIRECTORY STRUCTURE
+A well-structured project makes code easier to navigate and maintain. 
+Below is the typical structure:
+
+```
+   my_project/
+    ├── my_package        # Your modules
+    │   ├── __init__.py
+    │   ├── my_class.py
+    │   ├── my_io.py
+    │   └── my_render.py
+    ├── my_program.py     # Example program
+    ├── README.md
+    └── requirements.txt  # Dependencies
+```
+
+### 2. Build the project
 
 ```shell
 # (SHOULD) setup virtual environment `venv`
@@ -18,3 +36,4 @@ pip install -r requirements.txt
 # run program
 python my_program.py
 ```
+

@@ -15,7 +15,7 @@ The reader is expected to have basic knowledge of C programming. By the end of t
 
 ## II. SETTING UP THE PROJECT
 
-### 1. PROJECT DIRECTORY STRUCTURE
+### 1. Project directory structure
 A well-structured project makes code easier to navigate and maintain. 
 Below is the typical structure:
 
@@ -30,7 +30,7 @@ Below is the typical structure:
    │   └── my_render.h
    │   ├── pointcloud.h
    ├── build/           # Compiled binaries
-   ├── my_program/      # example program
+   ├── my_program/      # Example program
    │   └── main.c
    └── CMakeLists.txt   # Build automation
 ```
