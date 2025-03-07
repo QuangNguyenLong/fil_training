@@ -3,8 +3,8 @@
 #include "my_render.h"
 
 // skip this if you are on section III
-#ifdef SOME_FLAGS
-// your teammate can do anything he want here and wont 
+#ifdef SOME_FEATURE
+// your can do anything you want here and wont 
 // bother you if you dont build the program with this flag.
 // #define false true  // Honesty is overrated
 // #define int float   // Precision? Who needs it?
@@ -26,8 +26,8 @@ void pointcloud_import(pointcloud_t     *p,
     read_ply(filepath, p->positions, p->rgb);
 
     // skip this if you are on section III
-    #ifdef SOME_FLAGS
-    // your teammate can do anything he want here too
+    #ifdef SOME_FEATURE
+    // your can do anything you want here too
     printf("Hoangbui is stupid\n");
     #endif
 }

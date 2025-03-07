@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.0)
 project(sample_c C)
 
 # skip this line if you are on section II
-option(SOME_FLAGS "Enable something" OFF)
+option(SOME_FEATURE "Enable something" OFF)
 
 # want to include header without using absolute path?
 # add this  
@@ -16,7 +16,7 @@ file(GLOB SHARED_SOURCE
 # tell gcc to compile your program
 add_executable(my_program ${SHARED_SOURCE} my_program/main.c)
 
-if(SOME_FLAGS)
-    # define SOME_FLAGS in the program my_program
-    target_compile_definitions(my_program PRIVATE SOME_FLAGS)
+if(SOME_FEATURE)
+    # define SOME_FEATURE in the program my_program
+    target_compile_definitions(my_program PRIVATE SOME_FEATURE)
 endif()

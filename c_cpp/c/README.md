@@ -104,31 +104,42 @@ Check out how I render a point cloud in my main function [here](my_program/main.
 
 Why are you reading this ? Because your code is trash.
 
-## V. TEAM WORKING
+---
 
-At somepoint, you have to work with other people, or you have to code on legacy code (other people's mess), thus, you have to make changes to the project, but still, be able to not break everything. Behold, CMake compile definitions.
+## V. FEATURE TOGGLES  
 
-```
-option(SOME_FLAGS "Enable something" OFF)
-if(SOME_FLAGS)
-    # define SOME_FLAGS in the program my_program
-    target_compile_definitions(my_program PRIVATE SOME_FLAGS)
+At some point, you'll need to enable or disable certain features—maybe for debugging, platform-specific behavior, or experimental functionality. Instead of manually changing the source code every time, you can use **CMake compile definitions** to toggle features dynamically.  
+
+### Using CMake to Enable Features  
+
+With **CMake options**, you can define feature flags at compile time:  
+
+```cmake
+option(SOME_FEATURE "Enable some feature" OFF)
+if(SOME_FEATURE)
+    # Define SOME_FEATURE in the program my_program
+    target_compile_definitions(my_program PRIVATE SOME_FEATURE)
 endif()
 ```
 
-Now, when running CMake, your teammate can enable his mode like this:
+Now, when configuring the build, you (or anyone else) can toggle this feature without touching the code:  
 
-cmake .. -DSOME_FLAGS=ON
+```sh
+cmake .. -DSOME_FEATURE=ON
+```
 
-If SOME_FLAGS is ON, then `SOME_FLAGS` is defined in `my_program`, you can make it do something in your code, check [this](src/pointcloud.c) out.
-This way, you don’t have to manually edit the source code every time someone needs a different build setup.
+If `SOME_FEATURE` is `ON`, the macro `SOME_FEATURE` will be defined in `my_program`. You can then use it in your code to conditionally enable specific functionality. Check out [this example](src/pointcloud.c).  
 
-Now try rebuild the project with the flag and run `my_program`:
+### Building and Running with the Feature Enabled  
+
+To build the project with the feature flag:  
 
 ```sh
 mkdir build
 cd build
-cmake .. -DSOME_FLAGS=ON
+cmake .. -DSOME_FEATURE=ON
 make
 ./my_program
-```
+```  
+
+---
